@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eden Boarding House - Sign Up</title>
+    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <img src="https://d107tomoq7qta0.cloudfront.net/images/universities-logos/SlmZIgb6y2hjeJB8mpSubiZvCLtKEDuUMX4A5zsy.jpg" alt="Eden Logo" class="logo-img">
+                        <span>Eden Boarding House</span>
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="nav-actions">
+                    <a href="index.html" class="back-btn">Back</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Sign Up Section -->
+        <div class="auth-section">
+            <div class="auth-container">
+                <div class="auth-card">
+                    <div class="auth-header">
+                        <i class="fas fa-user-plus auth-icon"></i>
+                        <h2>Join Eden Boarding House</h2>
+                        <p>Create your account to book your stay</p>
+                    </div>
+
+                    <form class="auth-form" id="signupForm" action="index.html" method="get">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstname">
+                                    <i class="fas fa-user"></i>
+                                    First Name
+                                </label>
+                                <input type="text" id="firstname" name="firstname" class="form-control" placeholder="First name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastname">
+                                    <i class="fas fa-user"></i>
+                                    Last Name
+                                </label>
+                                <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Last name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="fas fa-envelope"></i>
+                                Email Address
+                            </label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">
+                                <i class="fas fa-phone"></i>
+                                Phone Number
+                            </label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter your phone number" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="password">
+                                    <i class="fas fa-lock"></i>
+                                    Password
+                                </label>
+                                <input type="password" id="password" name="password" class="form-control" placeholder="Create password" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm-password">
+                                    <i class="fas fa-lock"></i>
+                                    Confirm Password
+                                </label>
+                                <input type="password" id="confirm-password" name="confirm_password" class="form-control" placeholder="Confirm password" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="room-type">
+                                <i class="fas fa-bed"></i>
+                                Preferred Room Type
+                            </label>
+                            <select id="room-type" name="room_type" class="form-control" required>
+                                <option value="" disabled selected>Select room type</option>
+                                <option value="single">Single Room</option>
+                                <option value="double">Double Room</option>
+                                <option value="shared">Shared Room</option>
+                                <option value="family">Family Room</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="move-in">
+                                <i class="fas fa-calendar"></i>
+                                Planned Move-in Date
+                            </label>
+                            <input type="date" id="move-in" name="move_in" class="form-control" required>
+                        </div>
+
+                        <div class="terms-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <span>I agree to the <a href="#" class="terms-link">Terms and Conditions</a> and <a href="#" class="terms-link">Privacy Policy</a></span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="auth-btn">
+                            <i class="fas fa-user-plus"></i>
+                            Create Account
+                        </button>
+                    </form>
+
+                    <div class="auth-footer">
+                        <p>Already have an account?</p>
+                        <a href="login.html" class="switch-auth">
+                            Sign In <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="auth-benefits">
+                    <h3>Why choose Eden Boarding House?</h3>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check-circle"></i> Affordable monthly rates</li>
+                        <li><i class="fas fa-check-circle"></i> Fully furnished rooms</li>
+                        <li><i class="fas fa-check-circle"></i> Utilities included (water, electricity)</li>
+                        <li><i class="fas fa-check-circle"></i> Common area with TV and kitchen</li>
+                        <li><i class="fas fa-check-circle"></i> Study area for students</li>
+                        <li><i class="fas fa-check-circle"></i> Laundry service available</li>
+                        <li><i class="fas fa-check-circle"></i> Near universities and malls</li>
+                        <li><i class="fas fa-check-circle"></i> No hidden fees</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-info">
+                    <h3>Eden Boarding House</h3>
+                    <p>Your home away from home. Comfortable, safe, and affordable boarding house for students and professionals.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="rooms.html">Our Rooms</a>
+                    <a href="rates.html">Rates</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-phone"></i> +63 912 345 6789</p>
+                    <p><i class="fas fa-envelope"></i> edenboarding@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Eden Street, Manila</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Eden Boarding House. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
