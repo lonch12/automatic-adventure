@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eden Boarding House - Add Property</title>
+    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="https://d107tomoq7qta0.cloudfront.net/images/universities-logos/SlmZIgb6y2hjeJB8mpSubiZvCLtKEDuUMX4A5zsy.jpg" alt="Eden Boarding House" style="height: 40px; width: auto; border-radius: 4px;">
+                    <span>Eden Boarding House</span>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="rooms.html">Rooms</a>
+                    <a href="add-house.html" class="active">Add Property</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="nav-auth">
+                    <a href="login.html" class="auth-link">Login</a>
+                    <a href="signup.html" class="auth-link signup">Sign Up</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="header-content">
+                <h1>List Your Property</h1>
+                <p>Are you a landlord or agent? List your property with Eden Boarding House and reach thousands of potential tenants.</p>
+            </div>
+        </div>
+
+        <!-- Add Property Form Section -->
+        <section class="add-property-section">
+            <div class="container">
+                <div class="property-form-container">
+                    <h2 class="section-title">Property Listing Form</h2>
+                    <p class="section-subtitle">Fill in the details below to list your property</p>
+
+                    <form class="property-form" action="#" method="post">
+                        <!-- Landlord/Agent Information -->
+                        <div class="form-card">
+                            <h3 class="card-title">
+                                <i class="fas fa-user-circle"></i>
+                                Your Information
+                            </h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="full-name">
+                                        <i class="fas fa-user"></i>
+                                        Full Name *
+                                    </label>
+                                    <input type="text" id="full-name" name="full-name" class="form-control" placeholder="Enter your full name" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="user-role">
+                                        <i class="fas fa-briefcase"></i>
+                                        I am a *
+                                    </label>
+                                    <select id="user-role" name="user-role" class="form-control" required>
+                                        <option value="" disabled selected>Select your role</option>
+                                        <option value="landlord">Landlord / Property Owner</option>
+                                        <option value="agent">Real Estate Agent</option>
+                                        <option value="broker">Property Broker</option>
+                                        <option value="manager">Property Manager</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">
+                                        <i class="fas fa-phone"></i>
+                                        Phone Number *
+                                    </label>
+                                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="+260 XXX XXX XXX" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">
+                                        <i class="fas fa-envelope"></i>
+                                        Email Address *
+                                    </label>
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="your@email.com" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property Basic Information -->
+                        <div class="form-card">
+                            <h3 class="card-title">
+                                <i class="fas fa-home"></i>
+                                Property Basic Information
+                            </h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="property-type">
+                                        <i class="fas fa-building"></i>
+                                        Property Type *
+                                    </label>
+                                    <select id="property-type" name="property-type" class="form-control" required>
+                                        <option value="" disabled selected>Select property type</option>
+                                        <option value="house">House</option>
+                                        <option value="apartment">Apartment</option>
+                                        <option value="flat">Flat</option>
+                                        <option value="bedsitter">Bedsitter</option>
+                                        <option value="room">Single Room</option>
+                                        <option value="shared">Shared Room</option>
+                                        <option value="studio">Studio</option>
+                                        <option value="commercial">Commercial Space</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="listing-type">
+                                        <i class="fas fa-tag"></i>
+                                        Listing Type *
+                                    </label>
+                                    <select id="listing-type" name="listing-type" class="form-control" required>
+                                        <option value="" disabled selected>Select listing type</option>
+                                        <option value="rent">For Rent</option>
+                                        <option value="sale">For Sale</option>
+                                        <option value="lease">For Lease</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="price">
+                                        <i class="fas fa-dollar-sign"></i>
+                                        Price (ZMK) *
+                                    </label>
+                                    <input type="number" id="price" name="price" class="form-control" placeholder="e.g. 5000" min="0" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="price-period">
+                                        <i class="fas fa-clock"></i>
+                                        Price Period
+                                    </label>
+                                    <select id="price-period" name="price-period" class="form-control">
+                                        <option value="month">Per Month</option>
+                                        <option value="year">Per Year</option>
+                                        <option value="negotiable">Negotiable</option>
+                                        <option value="fixed">Fixed Price</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="bedrooms">
+                                        <i class="fas fa-bed"></i>
+                                        Bedrooms *
+                                    </label>
+                                    <input type="number" id="bedrooms" name="bedrooms" class="form-control" placeholder="Number of bedrooms" min="0" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="bathrooms">
+                                        <i class="fas fa-shower"></i>
+                                        Bathrooms *
+                                    </label>
+                                    <input type="number" id="bathrooms" name="bathrooms" class="form-control" placeholder="Number of bathrooms" min="0" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Location Details -->
+                        <div class="form-card">
+                            <h3 class="card-title">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Location Details
+                            </h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="area">
+                                        <i class="fas fa-map-pin"></i>
+                                        Area/Suburb *
+                                    </label>
+                                    <select id="area" name="area" class="form-control" required>
+                                        <option value="" disabled selected>Select area</option>
+                                        <option value="lilayi">Lilayi</option>
+                                        <option value="chalala">Chalala</option>
+                                        <option value="makeni">Makeni</option>
+                                        <option value="avondale">Avondale</option>
+                                        <option value="meanwood">Meanwood</option>
+                                        <option value="chudleigh">Chudleigh</option>
+                                        <option value="foxdale">Foxdale</option>
+                                        <option value="salama-park">Salama Park</option>
+                                        <option value="new-kasama">New Kasama</option>
+                                        <option value="chilenje">Chilenje</option>
+                                        <option value="cheston">Cheston</option>
+                                        <option value="others">Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="other-area">
+                                        <i class="fas fa-pen"></i>
+                                        If Other, Specify
+                                    </label>
+                                    <input type="text" id="other-area" name="other-area" class="form-control" placeholder="Enter area name">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="address">
+                                    <i class="fas fa-location-dot"></i>
+                                    Full Street Address
+                                </label>
+                                <input type="text" id="address" name="address" class="form-control" placeholder="Plot number, street name, landmark">
+                            </div>
+                        </div>
+
+                        <!-- Property Details -->
+                        <div class="form-card">
+                            <h3 class="card-title">
+                                <i class="fas fa-info-circle"></i>
+                                Property Details
+                            </h3>
+                            
+                            <div class="form-group">
+                                <label for="title">
+                                    <i class="fas fa-heading"></i>
+                                    Listing Title *
+                                </label>
+                                <input type="text" id="title" name="title" class="form-control" placeholder="e.g. Spacious 3-bedroom house in Lilayi with garden" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="description">
+                                    <i class="fas fa-align-left"></i>
+                                    Detailed Description *
+                                </label>
+                                <textarea id="description" name="description" class="form-control" rows="6" placeholder="Describe the property in detail - include information about rooms, condition, nearby amenities, etc." required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="label-block">
+                                    <i class="fas fa-check-circle"></i>
+                                    Property Features (Select all that apply)
+                                </label>
+                                <div class="features-grid">
+                                    <label class="feature-checkbox">
+                                        <input type="checkbox" name="features" value="wifi">
+                                        <i class="fas fa-wifi"></i>
+                                        <span>WiFi Available</span>
+                                    </label>
+                                    <label class="feature-checkbox">
+                                        <input type="checkbox" name="features" value="parking">
+                                        <i class="fas fa-parking"></i>
+                                        <span>Parking Space</span>
+                                    </label>
+                                    <label class="feature-checkbox">
+                                        <input type="checkbox" name="features" value="security">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <span>24/7 Security</span>
+                                    </label>
+                                    <label class="feature-checkbox">
+                                        <input type="checkbox" name="features" value="furnished">
+                                        <i class="fas fa-couch"></i>
+                                        <span>Fully Furnished</span>
+                                    </label>
+                                    <label class="feature-checkbox">
+                                        <input type="checkbox" name="features" value="kitchen">
+                                        <i class="fas fa-utensils"></i>
+                                        <span>Modern Kitchen</span>
+                                    </label>
+                                    <label class="feature-checkbox">
+                                        <input type="checkbox" name="features" value="water">
+                                        <i class="fas fa-water"></i>
+                                        <span>Water Heater</span>
+                                    </label>
+                                    <label class="feature-checkbox">
+                                        <input type="checkbox" name="features" value="ac">
+                                        <i class="fas fa-wind"></i>
+                                        <span>Air Conditioning</span>
+                                    </label>
+                                    <label class="feature-checkbox">
+                                        <input type="checkbox" name="features" value="laundry">
+                                        <i class="fas fa-tshirt"></i>
+                                        <span>Laundry Facilities</span>
+                                    </label>
+                                    <label class="feature-checkbox">
+                                        <input type="checkbox" name="features" value="garden">
+                                        <i class="fas fa-seedling"></i>
+                                        <span>Garden/Yard</span>
+                                    </label>
+                                    <label class="feature-checkbox">
+                                        <input type="checkbox" name="features" value="backup">
+                                        <i class="fas fa-bolt"></i>
+                                        <span>Backup Power</span>
+                                    </label>
+                                    <label class="feature-checkbox">
+                                        <input type="checkbox" name="features" value="pool">
+                                        <i class="fas fa-swimmer"></i>
+                                        <span>Swimming Pool</span>
+                                    </label>
+                                    <label class="feature-checkbox">
+                                        <input type="checkbox" name="features" value="pet">
+                                        <i class="fas fa-dog"></i>
+                                        <span>Pet Friendly</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="size">
+                                        <i class="fas fa-ruler-combined"></i>
+                                        Property Size (sq meters)
+                                    </label>
+                                    <input type="number" id="size" name="size" class="form-control" placeholder="e.g. 120">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="year-built">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        Year Built
+                                    </label>
+                                    <input type="number" id="year-built" name="year-built" class="form-control" placeholder="e.g. 2020" min="1900" max="2025">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Photos Section -->
+                        <div class="form-card">
+                            <h3 class="card-title">
+                                <i class="fas fa-camera"></i>
+                                Property Photos
+                            </h3>
+                            
+                            <div class="photo-upload-note">
+                                <p><i class="fas fa-info-circle"></i> You can upload up to 10 photos. Maximum file size: 5MB each. Supported formats: JPG, PNG</p>
+                            </div>
+                            
+                            <div class="file-upload-area">
+                                <input type="file" id="photos" name="photos" class="file-input" multiple accept="image/*">
+                                <div class="upload-placeholder">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <h4>Click to Browse Photos</h4>
+                                    <p>or drag and drop (if supported by your browser)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="video-url">
+                                    <i class="fab fa-youtube"></i>
+                                    Video Tour URL (Optional)
+                                </label>
+                                <input type="url" id="video-url" name="video-url" class="form-control" placeholder="https://www.youtube.com/watch?v=...">
+                            </div>
+                        </div>
+
+                        <!-- Terms and Submission -->
+                        <div class="form-card">
+                            <div class="terms-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="agree-terms" name="agree-terms" required>
+                                    <span>I confirm that all information provided is accurate and complete. I agree to the <a href="#" class="terms-link">Terms and Conditions</a> and <a href="#" class="terms-link">Listing Policy</a> of Eden Boarding House.</span>
+                                </label>
+                            </div>
+                            
+                            <div class="terms-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="contact-consent" name="contact-consent" required>
+                                    <span>I consent to be contacted by potential tenants and Eden Boarding House representatives regarding this property listing.</span>
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-check-circle"></i>
+                                Submit Property Listing
+                            </button>
+                            
+                            <p class="form-note">
+                                <i class="fas fa-clock"></i>
+                                Your listing will be reviewed by our team and published within 24-48 hours.
+                            </p>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Tips Sidebar -->
+                <div class="tips-sidebar">
+                    <div class="tips-card">
+                        <h3><i class="fas fa-lightbulb"></i> Pro Tips for Landlords</h3>
+                        
+                        <div class="tip-item">
+                            <div class="tip-icon">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h4>High-Quality Photos</h4>
+                                <p>Take photos during daytime with good lighting. Show each room from multiple angles.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-item">
+                            <div class="tip-icon">
+                                <i class="fas fa-pen-fancy"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h4>Detailed Description</h4>
+                                <p>Highlight unique features, recent renovations, and nearby amenities like schools, shops, and transport.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-item">
+                            <div class="tip-icon">
+                                <i class="fas fa-tag"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h4>Competitive Pricing</h4>
+                                <p>Research similar properties in the same area to set a competitive and realistic price.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-item">
+                            <div class="tip-icon">
+                                <i class="fas fa-check-double"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h4>Be Accurate</h4>
+                                <p>Provide accurate information about the property size, condition, and included amenities.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-item">
+                            <div class="tip-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h4>Respond Quickly</h4>
+                                <p>Properties with quick response times get more inquiries and faster bookings.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="agent-contact-card">
+                        <i class="fas fa-headset"></i>
+                        <h4>Need Help Listing?</h4>
+                        <p>Our agent support team can help you create the perfect listing</p>
+                        <div class="agent-contact-info">
+                            <p><i class="fas fa-phone"></i> +260 97 123 4567</p>
+                            <p><i class="fas fa-envelope"></i> listings@edenboarding.com</p>
+                        </div>
+                        <a href="contact.html" class="agent-contact-btn">Contact Support</a>
+                    </div>
+                    
+                    <div class="stats-mini-card">
+                        <div class="stat-mini">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Active Listings</span>
+                        </div>
+                        <div class="stat-mini">
+                            <span class="stat-number">200+</span>
+                            <span class="stat-label">Happy Landlords</span>
+                        </div>
+                        <div class="stat-mini">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Partner Agents</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-info">
+                    <h3>Eden Boarding House</h3>
+                    <p>Your trusted partner in finding quality accommodation across Zambia. We connect tenants with the best properties.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="rooms.html">Properties</a>
+                    <a href="add-house.html">List a Property</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>For Landlords</h4>
+                    <a href="#">Why List With Us</a>
+                    <a href="#">Pricing Plans</a>
+                    <a href="#">Success Stories</a>
+                    <a href="#">FAQ for Landlords</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-phone"></i> +260 97 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@edenboarding.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Cairo Road, Lusaka, Zambia</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Eden Boarding House. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eden Boarding House - Premium Homes & Boarding Houses</title>
+    <link rel="stylesheet" href="landing-style.css?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/jpg" href="https://d107tomoq7qta0.cloudfront.net/images/universities-logos/SlmZIgb6y2hjeJB8mpSubiZvCLtKEDuUMX4A5zsy.jpg">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="/" class="logo">
+                    <img src="https://d107tomoq7qta0.cloudfront.net/images/universities-logos/SlmZIgb6y2hjeJB8mpSubiZvCLtKEDuUMX4A5zsy.jpg" alt="Eden Boarding House" style="height: 50px; width: auto;">
+                    <span class="logo-text">EDEN BOARDING HOUSE</span>
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-link active">Home</a></li>
+                    <li><a href="#featured" class="nav-link">Properties</a></li>
+                    <li><a href="#why-us" class="nav-link">Why Us</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="add-house.html" class="nav-link btn-add-property">+ Add Property</a></li>
+                    <li><a href="signup.html" class="nav-link btn-signup">Sign Up</a></li>
+                    <li><a href="login.html" class="nav-link btn-login">Login</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">SEARCH HOUSES, OFFICES & BOARDING HOUSES</h1>
+            <p class="hero-subtitle">Find your perfect property with Eden Boarding House - Premium listings for every need</p>
+        </div>
+    </section>
+
+    <!-- Search Bar Section -->
+    <section class="search-bar-section">
+        <div class="container">
+            <form class="search-form" id="propertySearch">
+                <div class="search-form-group">
+                    <label>Location</label>
+                    <input type="text" placeholder="Enter location" name="location">
+                </div>
+                <div class="search-form-group">
+                    <label>Property Type</label>
+                    <select name="type">
+                        <option value="">Any Type</option>
+                        <option value="house">House</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="boarding">Boarding House</option>
+                        <option value="office">Office</option>
+                    </select>
+                </div>
+                <div class="search-form-group">
+                    <label>Bedrooms</label>
+                    <select name="bedrooms">
+                        <option value="">Any</option>
+                        <option value="1">1 Bedroom</option>
+                        <option value="2">2 Bedrooms</option>
+                        <option value="3">3 Bedrooms</option>
+                        <option value="4">4+ Bedrooms</option>
+                    </select>
+                </div>
+                <div class="search-form-group">
+                    <label>Price Range</label>
+                    <select name="price">
+                        <option value="">Any Price</option>
+                        <option value="1000-2000">K1,000 - K2,000</option>
+                        <option value="2000-5000">K2,000 - K5,000</option>
+                        <option value="5000-10000">K5,000 - K10,000</option>
+                        <option value="10000">K10,000+</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-search">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Properties Section with Sidebar -->
+    <section class="properties-section" id="featured">
+        <div class="container">
+            <div class="properties-wrapper">
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-widget categories">
+                        <h3>Categories</h3>
+                        <ul class="category-list">
+                            <li><a href="#">Houses</a></li>
+                            <li><a href="#">Apartments</a></li>
+                            <li><a href="#">Boarding Houses</a></li>
+                            <li><a href="#">Offices</a></li>
+                            <li><a href="#">Flats</a></li>
+                            <li><a href="#">Commercial</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget features">
+                        <h3>Top Locations</h3>
+                        <ul class="feature-list">
+                            <li><a href="#">Lusaka - Central</a></li>
+                            <li><a href="#">Lusaka - East</a></li>
+                            <li><a href="#">Lusaka - West</a></li>
+                            <li><a href="#">Copperbelt</a></li>
+                            <li><a href="#">Southern Province</a></li>
+                            <li><a href="#">Northern Province</a></li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="properties-main">
+                    <!-- Controls -->
+                    <div class="properties-controls">
+                        <div class="control-left">
+                            <span class="results-count">Showing properties</span>
+                        </div>
+                        <div class="control-right">
+                            <label>Sort By:</label>
+                            <select class="sort-select">
+                                <option>Latest</option>
+                                <option>Price: Low to High</option>
+                                <option>Price: High to Low</option>
+                                <option>Most Popular</option>
+                            </select>
+                            <div class="view-toggle">
+                                <button class="view-btn active" data-view="grid" title="Grid View">
+                                    <i class="fas fa-th"></i>
+                                </button>
+                                <button class="view-btn" data-view="list" title="List View">
+                                    <i class="fas fa-list"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Property Grid -->
+                    <div class="property-grid">
+                        <!-- Property Card 1 -->
+                        <div class="property-card">
+                            <div class="property-image">
+                                <img src="https://ext.same-assets.com/3341618919/1273648922.jpeg" alt="3 Bedroom House">
+                                <span class="property-badge featured">Featured</span>
+                                <span class="property-price">K2,500</span>
+                            </div>
+                            <div class="property-info">
+                                <h3>Modern 3 Bedroom House</h3>
+                                <p class="property-location"><i class="fas fa-map-marker-alt"></i> Lusaka, Central</p>
+                                <div class="property-meta">
+                                    <span><i class="fas fa-bed"></i> 3 Beds</span>
+                                    <span><i class="fas fa-bath"></i> 2 Baths</span>
+                                    <span><i class="fas fa-expand"></i> 150m²</span>
+                                </div>
+                                <p class="property-desc">Spacious modern house with modern amenities in a secure gated community.</p>
+                                    <div class="property-footer">
+                                    <span class="phone"><i class="fas fa-phone"></i> +260-77750-8788</span>
+                                    <a href="login.html" class="btn-view">Sign in first</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property Card 2 -->
+                        <div class="property-card">
+                            <div class="property-image">
+                                <img src="https://ext.same-assets.com/3341618919/1273648922.jpeg" alt="2 Bedroom Apartment">
+                                <span class="property-price">K1,800</span>
+                            </div>
+                            <div class="property-info">
+                                <h3>Cozy 2 Bedroom Apartment</h3>
+                                <p class="property-location"><i class="fas fa-map-marker-alt"></i> Lusaka, East</p>
+                                <div class="property-meta">
+                                    <span><i class="fas fa-bed"></i> 2 Beds</span>
+                                    <span><i class="fas fa-bath"></i> 1 Bath</span>
+                                    <span><i class="fas fa-expand"></i> 100m²</span>
+                                </div>
+                                <p class="property-desc">Well-located apartment close to shops, schools and hospitals with parking.</p>
+                                    <div class="property-footer">
+                                    <span class="phone"><i class="fas fa-phone"></i> +260-96094-6458</span>
+                                    <a href="login.html" class="btn-view">Sign in first</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property Card 3 -->
+                        <div class="property-card">
+                            <div class="property-image">
+                                <img src="https://ext.same-assets.com/3341618919/1273648922.jpeg" alt="Boarding House">
+                                <span class="property-badge featured">Featured</span>
+                                <span class="property-price">K1,200</span>
+                            </div>
+                            <div class="property-info">
+                                <h3>Premium Boarding House</h3>
+                                <p class="property-location"><i class="fas fa-map-marker-alt"></i> Lusaka, West</p>
+                                <div class="property-meta">
+                                    <span><i class="fas fa-bed"></i> Shared</span>
+                                    <span><i class="fas fa-bath"></i> Common</span>
+                                    <span><i class="fas fa-expand"></i> 50m²</span>
+                                </div>
+                                <p class="property-desc">Quality boarding house with meals included, WiFi, and 24/7 security services.</p>
+                                    <div class="property-footer">
+                                    <span class="phone"><i class="fas fa-phone"></i> +260-77750-8788</span>
+                                    <a href="login.html" class="btn-view">Sign in first</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property Card 4 -->
+                        <div class="property-card">
+                            <div class="property-image">
+                                <img src="https://ext.same-assets.com/3341618919/1273648922.jpeg" alt="Office Space">
+                                <span class="property-price">K3,500</span>
+                            </div>
+                            <div class="property-info">
+                                <h3>Executive Office Space</h3>
+                                <p class="property-location"><i class="fas fa-map-marker-alt"></i> Lusaka, Central</p>
+                                <div class="property-meta">
+                                    <span><i class="fas fa-door-open"></i> 3 Offices</span>
+                                    <span><i class="fas fa-bath"></i> 2 Facilities</span>
+                                    <span><i class="fas fa-expand"></i> 200m²</span>
+                                </div>
+                                <p class="property-desc">Professional office space with furnished rooms, reception and meeting areas.</p>
+                                    <div class="property-footer">
+                                    <span class="phone"><i class="fas fa-phone"></i> +260-96094-6458</span>
+                                    <a href="login.html" class="btn-view">Sign in first</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property Card 5 -->
+                        <div class="property-card">
+                            <div class="property-image">
+                                <img src="https://ext.same-assets.com/3341618919/1273648922.jpeg" alt="Luxury Flat">
+                                <span class="property-badge featured">Featured</span>
+                                <span class="property-price">K2,200</span>
+                            </div>
+                            <div class="property-info">
+                                <h3>Luxury 2 Bedroom Flat</h3>
+                                <p class="property-location"><i class="fas fa-map-marker-alt"></i> Lusaka, North</p>
+                                <div class="property-meta">
+                                    <span><i class="fas fa-bed"></i> 2 Beds</span>
+                                    <span><i class="fas fa-bath"></i> 2 Baths</span>
+                                    <span><i class="fas fa-expand"></i> 120m²</span>
+                                </div>
+                                <p class="property-desc">Luxury flat with high-end finishes, balcony, and scenic views of the city.</p>
+                                    <div class="property-footer">
+                                    <span class="phone"><i class="fas fa-phone"></i> +260-77750-8788</span>
+                                    <a href="login.html" class="btn-view">Sign in first</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property Card 6 -->
+                        <div class="property-card">
+                            <div class="property-image">
+                                <img src="https://ext.same-assets.com/3341618919/1273648922.jpeg" alt="Commercial Space">
+                                <span class="property-price">K4,000</span>
+                            </div>
+                            <div class="property-info">
+                                <h3>Commercial Shop Space</h3>
+                                <p class="property-location"><i class="fas fa-map-marker-alt"></i> Lusaka, East</p>
+                                <div class="property-meta">
+                                    <span><i class="fas fa-store"></i> Retail</span>
+                                    <span><i class="fas fa-bath"></i> 1 Facility</span>
+                                    <span><i class="fas fa-expand"></i> 80m²</span>
+                                </div>
+                                <p class="property-desc">Prime commercial space in busy shopping zone with high foot traffic and visibility.</p>
+                                    <div class="property-footer">
+                                    <span class="phone"><i class="fas fa-phone"></i> +260-96094-6458</span>
+                                    <a href="login.html" class="btn-view">Sign in first</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <a href="#" class="page-link active">1</a>
+                        <a href="#" class="page-link">2</a>
+                        <a href="#" class="page-link">3</a>
+                        <span class="page-dots">...</span>
+                        <a href="#" class="page-link">Next <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+    <!-- How To Use Section -->
+    <section class="how-to-use-section" id="how-to-use">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">GET STARTED</span>
+                <h2 class="section-title">HOW TO USE</h2>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Create Account</h3>
+                    <p>Register an account to access full features and contact property owners.</p>
+                    <a href="signup.html" class="step-link">Create Account <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>View Houses</h3>
+                    <p>Browse available houses, apartments and boarding houses that fit your needs.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Communicate with Landlord</h3>
+                    <p>Contact the property owner directly to arrange viewings and finalize details.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-us-section" id="why-us">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Eden?</h2>
+                <p>Premier real estate solutions for your perfect home</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Safe & Secure</h3>
+                    <p>All properties are verified and secure. We ensure your safety and peace of mind with trusted landlords.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Expert Support</h3>
+                    <p>Our team is available 24/7 to assist you with any questions or concerns about your property search.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Quality Listings</h3>
+                    <p>We feature only premium properties that meet our high standards for comfort and quality.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Transparent Process</h3>
+                    <p>Clear pricing, no hidden fees, and transparent communication throughout your rental journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-number">1500+</div>
+                    <p>Properties Listed</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">8000+</div>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">12+</div>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">24/7</div>
+                    <p>Customer Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Have a Property to List?</h2>
+                <p>Join thousands of property owners who have successfully listed their properties with Eden Boarding House</p>
+                <a href="add-house.html" class="btn btn-primary btn-large">
+                    <i class="fas fa-plus"></i> Add Your Property Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-header">
+                        <img src="https://d107tomoq7qta0.cloudfront.net/images/universities-logos/SlmZIgb6y2hjeJB8mpSubiZvCLtKEDuUMX4A5zsy.jpg" alt="Eden" class="footer-logo">
+                        <h3>EDEN BOARDING HOUSE</h3>
+                    </div>
+                    <p>Your trusted partner in finding the perfect property. We connect property owners with qualified renters across Zambia.</p>
+                    <div class="social-icons">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#featured">Properties</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Houses for Rent</a></li>
+                        <li><a href="#">Apartments</a></li>
+                        <li><a href="#">Boarding Houses</a></li>
+                        <li><a href="#">Office Spaces</a></li>
+                        <li><a href="#">Commercial</a></li>
+                        <li><a href="#">All Properties</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Get In Touch</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> EDEN AREA Building, Lusaka, Zambia</li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:nyikadzinomunashe12@gmail.com">nyikadzinomunashe12@gmail.com</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+260-77750-8788">+260-77750-8788</a></li>
+                        <li><i class="fas fa-fax"></i> <a href="tel:+260-96094-6458">+260-96094-6458</a></li>
+                    </ul>
+                    <div class="working-hours">
+                        <p><strong>Hours:</strong> Mon-Fri 9AM-6PM, Sat 10AM-4PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Eden Boarding House. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Sitemap</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const nav = document.querySelector('.nav');
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', function() {
+                nav.classList.toggle('mobile-active');
+            });
+        }
+
+        // Scroll to Top
+        const scrollToTop = document.getElementById('scrollToTop');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollToTop.classList.add('visible');
+            } else {
+                scrollToTop.classList.remove('visible');
+            }
+        });
+
+        if (scrollToTop) {
+            scrollToTop.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Property Grid View Toggle
+        const viewBtns = document.querySelectorAll('.view-btn');
+        const propertyGrid = document.querySelector('.property-grid');
+        
+        viewBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                viewBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const view = this.dataset.view;
+                if (propertyGrid) {
+                    propertyGrid.className = 'property-grid ' + view + '-view';
+                }
+            });
+        });
+
+        // Search Form Submission
+        const propertySearch = document.getElementById('propertySearch');
+        if (propertySearch) {
+            propertySearch.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Add your search logic here
+                console.log('Search submitted');
+            });
+        }
+    </script>
+</body>
+</html>
